@@ -3,7 +3,7 @@ def test_get_assignments_teacher_1(client, h_teacher_1):
         '/teacher/assignments',
         headers=h_teacher_1
     )
-
+    print('hello '+str(response.status_code))
     assert response.status_code == 200
 
     data = response.json['data']
